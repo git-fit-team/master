@@ -1,19 +1,19 @@
-#You need to install the dependencies on both the front and back end
+# You need to install the dependencies on both the front and back end
 
-##// In the root folder run
+## In the root folder run
 npm install
 
-##// In the angular-src folder run
+## In the angular-src folder run
 npm install
 
-##// Run the server from root
+## Run the server from root
 npm start
 
-##// Run the client from angular-src
+## Run the client from angular-src
 ng serve
 
-##// Visit localhost:4200 to see angular app
+## Visit localhost:4200 to see angular app
 
-#Please put the correct files in the corresponding directories.
+# Please put the correct files in the corresponding directories.
 
-##//Images in 'git-fit/angular-src/src/assets/img'
+## Images in 'git-fit/angular-src/src/assets/img'
