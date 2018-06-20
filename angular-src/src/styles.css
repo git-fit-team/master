@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Color Scheme*/
+.dark-primary-color    { background: #1976D2; }
+.default-primary-color { background: #2196F3; }
+.light-primary-color   { background: #BBDEFB; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #9E9E9E; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+/* End of color Scheme*/
+
+/*  Google Font Family  */
+font-family: 'Roboto Slab', serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Montserrat', sans-serif;
+/* End of Google font family */
