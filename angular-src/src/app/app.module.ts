@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-import { FlashMessagesModule } from 'angular2-flash-messages';
 import { FormsModule} from '@angular/forms';
 
 // Component Imports
@@ -54,8 +53,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes),
-    FlashMessagesModule.forRoot()
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent]

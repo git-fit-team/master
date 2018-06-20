@@ -1,47 +1,114 @@
-.background {
-    background-image: url("../../../assets/img/git-fit-background-smudge2.png");
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
+/* CSS Variables */
+:root {
+  --logo-blue:#1B9CFC;
+  --soft-grey:#F1F2F6;
+  --main-font:'Roboto', sans-serif;
+  --charcoal:#2F3542;
+  --button-shadow:0px 1px 1.3px #828282;
+  --box-shadow:0px 4px 8px rgba(0, 0, 0, 0.8);
+  --rounded-corners:4px;
+  --button-green:#2ED573;
+}
+
+body{
+  margin: auto;
+}
+
+p{
+  font-family: var(--main-font);
+}
+
+h1 h2 h3 h4 h5 h6{
+font-family: var(--main-font);
+}
+
+/* Header Section */
+.header{
+  height:80px;
+  background-color: var(--logo-blue);
+}
+
+/* Homepage Hero Section */
+
+.hero{
+  background-image: url("../../../assets/img/gitfit-bg-blur.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headline h1{
+  margin-top: 30px;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 75px;
+  text-shadow: 2px 2px 2px #2F3542;
+}
+
+  .my-nav{
+    padding:10px;
   }
 
-  /* Landing Page Css */
-.logo-box {
-    height: 550px;
-    width: 550px;
-    background-color: rgba(28,130,223,.8);
-    margin: auto;
-    margin-top: 3%;
-    border-radius: 50%;
-    border: 4px groove rgba(214, 94, 21, 1);
-    }
-  
-  .logo-img {
-    margin: -10% 0% 0% 4%;
+  .hero{
+    background-color: #9E9E9E;
+    padding: 20px 0;
   }
-  
-  .button-header {
-    color: #000;
-    background-color: rgba(255,255,255,.8);
-    padding: 5px;
-    margin: auto;
-    margin-top: 1%;
-    border-radius: 7px;
-    padding: 1%;
-    text-align: center;
+
+  .headline{
+    font-family:'Roboto';
+    font-size: 56px;
+    line-height:65px;
+    color: #FFF;
+
   }
-  
-  .start-button {
-    background: rgba(214, 94, 21, 1);
-    margin: auto;
-    margin-top: 1%;
-    font-size: 40px;
-    text-decoration: none !important;
-    color: #000;
-    font-family: 'anton', sans-serif;
-    border-radius: 5px;
-  }
-  .start-button:hover {
-    color: #1976d2;
-  }
-  
+
+.start-btn{
+  font-size: 30px;
+  box-shadow: var(--button-shadow);
+}
+
+.start-btn a{
+  text-decoration: none;
+  color: #FFF;
+}
+
+.calorie-cal{
+  width:100%;
+  background-color: pink;
+  height: 400px;
+}
+
+.sign-in{
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid white !important;
+  text-align: right;
+  float:right;
+}
+
+
+/* Features Section */
+.features{
+  padding: 10px 0;
+}
+.feature-box{
+  width:100%;
+  height:500px;
+  margin: 20px 0;
+  background-color: #E0E0E0;
+
+}
+
+.middle-feature{
+  background-color:var(--soft-grey);
+}
+
+
+/* Footer Section */
+
+.footer{
+  background-color: var(--charcoal);
+  color:#fff;
+  height: 40px;
+  padding: 10px;
+}
