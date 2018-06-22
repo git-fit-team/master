@@ -1,4 +1,4 @@
 module.exports = {
-  database: 'mongodb://adrw4:andrew1@ds036079.mlab.com:36079/git-fit-team',
+  database: 'mongodb://andrew:andrew1@ds018498.mlab.com:18498/gitfit',
   secret: 'yoursecret'
 }
