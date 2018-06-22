@@ -31,11 +31,11 @@ export class LoginComponent implements OnInit {
       if(data.success){
         this.authService.storeUserData(data.token, data.user);
         console.log("success");
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['/dashboard']);
       } else {
         console.log(this.authService);
         console.log("else");
-        this.router.navigate(['login']);
+        this.router.navigate(['/login']);
       }
     });
   }
