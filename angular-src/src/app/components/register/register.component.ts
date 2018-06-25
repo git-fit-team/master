@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ValidateService} from '../../services/validate.service'
 import {AuthService} from '../../services/auth.service'
 import {Router} from '@angular/router';
+import { FlashMessagesService } from 'ngx-flash-messages';
 
 @Component({
   selector: 'app-register',
@@ -17,14 +18,14 @@ export class RegisterComponent implements OnInit {
   constructor(
     private validateService: ValidateService,
     private authService:AuthService,
-    private router: Router
+    private router: Router,
+    private flashMessagesService: FlashMessagesService
   ) { }
 
   ngOnInit() {
   }
 
   onRegisterSubmit(){
-
     const user = {
       name: this.name,
       email: this.email,
@@ -34,7 +35,10 @@ export class RegisterComponent implements OnInit {
 
     // Required Fields
     if(!this.validateService.validateRegister(user)){
-      alert('Please fill in all fields');
+      this.flashMessagesService.show('Please fill in all of the fields.', {
+        classes: ['bg-info'], // You can pass as many classes as you need
+        timeout: 5000, // Default is 3000
+      });
       return false;
     }
     

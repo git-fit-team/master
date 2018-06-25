@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule} from '@angular/forms';
+import { FlashMessagesModule } from 'ngx-flash-messages';
 
 // Component Imports
 import { AppComponent } from './app.component';
@@ -24,13 +25,13 @@ import { StartProfileComponent } from './components/start-profile/start-profile.
 import { AuthGuard } from './guards/auth.guard';
 
 const appRoutes: Routes = [
-  {path:'chats', component: ChatsComponent},
-  {path:'dashboard', component: DashboardComponent},
+  {path:'chats', component: ChatsComponent, canActivate:[AuthGuard]},
+  {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path:'login', component: LoginComponent},
-  {path:'progress', component: ProgressComponent},
+  {path:'progress', component: ProgressComponent, canActivate:[AuthGuard]},
   {path:'register', component: RegisterComponent},
-  {path:'settings', component: SettingsComponent},
-  {path:'user-profile', component: UserProfileComponent},
+  {path:'settings', component: SettingsComponent, canActivate:[AuthGuard]},
+  {path:'user-profile', component: UserProfileComponent, canActivate:[AuthGuard]},
   {path:'navbar', component: NavbarComponent},
   {path:'', component: HomeComponent}
 ]
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    FlashMessagesModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ValidateService, AuthService, AuthGuard],
