@@ -26,9 +26,9 @@ import { AuthGuard } from './guards/auth.guard';
 const appRoutes: Routes = [
   {path:'chats', component: ChatsComponent, canActivate:[AuthGuard]},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path:'login', component: LoginComponent, canActivate:[AuthGuard]},
+  {path:'login', component: LoginComponent},
   {path:'progress', component: ProgressComponent, canActivate:[AuthGuard]},
-  {path:'register', component: RegisterComponent, canActivate:[AuthGuard]},
+  {path:'register', component: RegisterComponent},
   {path:'settings', component: SettingsComponent, canActivate:[AuthGuard]},
   {path:'user-profile', component: UserProfileComponent, canActivate:[AuthGuard]},
   {path:'navbar', component: NavbarComponent},
