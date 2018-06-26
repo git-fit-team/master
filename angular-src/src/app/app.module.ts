@@ -21,15 +21,14 @@ import { SettingsComponent } from './components/settings/settings.component';
 // Service Imports
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
-import { StartProfileComponent } from './components/start-profile/start-profile.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const appRoutes: Routes = [
   {path:'chats', component: ChatsComponent, canActivate:[AuthGuard]},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path:'login', component: LoginComponent},
+  {path:'login', component: LoginComponent, canActivate:[AuthGuard]},
   {path:'progress', component: ProgressComponent, canActivate:[AuthGuard]},
-  {path:'register', component: RegisterComponent},
+  {path:'register', component: RegisterComponent, canActivate:[AuthGuard]},
   {path:'settings', component: SettingsComponent, canActivate:[AuthGuard]},
   {path:'user-profile', component: UserProfileComponent, canActivate:[AuthGuard]},
   {path:'navbar', component: NavbarComponent},
@@ -47,8 +46,7 @@ const appRoutes: Routes = [
     UserProfileComponent,
     ProgressComponent,
     ChatsComponent,
-    SettingsComponent,
-    StartProfileComponent
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
