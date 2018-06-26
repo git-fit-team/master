@@ -22,6 +22,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
+import { Register2Component } from './components/register2/register2.component';
 
 const appRoutes: Routes = [
   {path:'chats', component: ChatsComponent, canActivate:[AuthGuard]},
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
     UserProfileComponent,
     ProgressComponent,
     ChatsComponent,
-    SettingsComponent
+    SettingsComponent,
+    Register2Component
   ],
   imports: [
     BrowserModule,

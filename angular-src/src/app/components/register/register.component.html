@@ -1,23 +1,76 @@
 <app-navbar></app-navbar>
 <ngx-flash-messages></ngx-flash-messages>
-<form (submit)="onRegisterSubmit()">
-  <div class="form-group">
-    <label>Name</label>
-    <input type="text" [(ngModel)]="name" name="name" class="form-control">
-  </div>
-  <div class="form-group">
-    <label>Username</label>
-    <input type="text" [(ngModel)]="username" name="username" class="form-control">
-  </div>
-  <div class="form-group">
-    <label>Email</label>
-    <input type="text" [(ngModel)]="email" name="email" class="form-control" >
-  </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input type="password" [(ngModel)]="password" name="password" class="form-control">
-  </div>
-  <input type="submit" class="btn btn-primary" value="Submit">
-</form>
 
 
+
+
+
+
+<div class="container-fluid">
+  <!-- Header -->
+  <div class="row">
+    <div class="col-md-12 header"></div>
+  </div>
+  <div class="row body-section">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="col-md-12 register-section">
+        <div class="register-box">
+          <form (submit)="onRegisterSubmit()" class="register-form">
+            <h2 class="text-center">Welcome! Lets get you started!</h2>
+  
+            <div class="form-group">
+              <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Name">
+            </div>
+  
+            <div class="form-group">
+              <input type="text" [(ngModel)]="username" name="username" class="form-control" id="userName" placeholder="Username">
+            </div>
+  
+            <div class="form-group">
+              <input type="text" [(ngModel)]="email" name="email" class="form-control" id="email" placeholder="Email">
+            </div>
+  
+            <div class="form-group">
+              <input type="password" [(ngModel)]="password" name="password" class="form-control" id="password" placeholder="Password">
+            </div>
+  
+            <button type="submit" class="btn btn-success my-btn" value="Submit">
+              <a href="register-2.html" routerLink="">Next</a>
+            </button>
+  
+          </form>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 dot-indicators text-center">
+            <span class="dot dot-active"></span>
+            <span class="dot dot-inactive"></span>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+  
+    </div>
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <!-- Footer Section -->
+    <div class="row footer">
+    <div class="col-md-12">
+      <p class="text-center">Create by: Jeff Pendergrass, Andrew Waller and Felipe Hernandez</p>
+  
+    </div>
+    </div>
+  
+  
+  
+  </div>
