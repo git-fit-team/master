@@ -1,91 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 /* CSS Variables */
+
 :root {
-    --logo-blue:#1B9CFC;
-    --soft-grey:#F1F2F6;
-    --main-font:'Roboto', sans-serif;
-    --charcoal:#2F3542;
-    --button-shadow:0px 1px 1.3px #828282;
-    --box-shadow:0px 4px 8px rgba(0, 0, 0, 0.8);
-    --rounded-corners:4px;
-    --button-green:#2ED573;
-  }
-  
-  body{
+    --logo-blue: #1B9CFC;
+    --soft-grey: #F1F2F6;
+    --main-font: 'Roboto', sans-serif;
+    --charcoal: #2F3542;
+    --button-shadow: 0px 1px 1.3px #828282;
+    --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+    --rounded-corners: 4px;
+    --button-green: #2ED573;
+}
+
+body {
     margin: 0 auto;
-  }
-  
-  p{
+}
+
+p {
     font-family: var(--main-font);
-  }
-  
-  h1 h2 h3 h4 h5 h6{
-  font-family: var(--main-font);
-  }
-  
-  /* Header Section */
-  .header{
-    height:80px;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    font-family: var(--main-font);
+}
+
+
+/* Header Section */
+
+.header {
+    height: 80px;
     background-color: var(--logo-blue);
-  }
-  
-  .mynav-bar{
+}
+
+.mynav-bar {
     margin: 0;
-    padding:0 30px;
+    padding: 0 30px;
     height: 80px
-  }
-  
-  /* Homepage Hero Section */
-  
-  .hero{
+}
+
+
+/* Homepage Hero Section */
+
+.hero {
     background-image: url("./assets/img/gitfit-bg-blur.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  
-  h1{
-    font-family:'Roboto';
+}
+
+h1 {
+    font-family: 'Roboto';
     font-size: 56px;
     font-weight: 300;
-  
-  }
-  
-  .headline h1{
+}
+
+.headline h1 {
     margin-top: 30px;
     font-weight: 300;
     text-shadow: 2px 2px 2px #2F3542;
-    line-height:65px;
+    line-height: 65px;
     color: #FFF;
-  }
-  
-    .hero{
-      background-color: #9E9E9E;
-      padding: 20px 0;
-    }
-  
-  
-  .start-btn{
+}
+
+.hero {
+    background-color: #9E9E9E;
+    padding: 20px 0;
+}
+
+.start-btn {
     font-size: 30px;
     box-shadow: var(--button-shadow);
     margin: 20px 0 40px 0;
-  }
-  
-  .start-btn a{
+}
+
+.start-btn a {
     text-decoration: none;
     color: #FFF;
-  }
-  
-  .calorie-cal{
-    width:100%;
+}
+
+.calorie-cal {
+    width: 100%;
     background-color: pink;
     height: 400px;
     margin-bottom: 20px;
-  }
-  
-  .sign-in{
-    text-transform:uppercase;
+}
+
+.sign-in {
+    text-transform: uppercase;
     font-size: 14px;
     text-decoration: none;
     padding: 8px 16px;
@@ -93,81 +96,120 @@
     border: solid 1px #fff;
     font-family: var(--main-font);
     letter-spacing: .5px;
-  
-  }
-  
-  .sign-in a{
-    color:#fff;
-  }
-  
-  /* Features Section */
-  .features{
+    margin-top: 34px;
+}
+
+.sign-in a {
+    color: #fff;
+}
+
+
+/* Features Section */
+
+.features {
     padding: 10px 0;
-  }
-  .feature-box{
-    width:100%;
-    height:500px;
+}
+
+.feature-box {
+    width: 100%;
+    height: 500px;
     margin: 20px 0;
     background-color: #E0E0E0;
-  
-  }
-  
-  .icons{
+}
+
+.icons {
     font-size: 60px;
-    color:var(--logo-blue);
-  }
-  /* .middle-feature{
+    color: var(--logo-blue);
+}
+
+
+/* .middle-feature{
     background-color:var(--soft-grey);
   } */
-  
-  .features-section{
+
+.features-section {
     padding: 30px 0;
-  }
-  
-  .features h3{
+}
+
+.features h3 {
     font-size: 35px;
     font-weight: 300;
     text-align: center;
-  }
-  
-  .features p{
+}
+
+.features p {
     font-size: 18px;
     font-weight: 100;
     text-align: center;
-  }
-  
-  .features{
+}
+
+.features {
     margin: 3% 0;
-    padding:0 30px;
-  }
-  
-  .fa-dumbell{
+    padding: 0 30px;
+}
+
+.fa-dumbell {
     font-size: 40px;
     text-align: center;
-  }
-  /* Footer Section */
-  
-  .footer{
+}
+
+
+/* Footer Section */
+
+.footer {
     background-color: var(--charcoal);
-    color:#fff;
+    color: #fff;
     padding: 20px 5px;
-  }
-  
+}
+
 
 /* Color Scheme*/
-.dark-primary-color    { background: #1976D2; }
-.default-primary-color { background: #2196F3; }
-.light-primary-color   { background: #BBDEFB; }
-.text-primary-color    { color: #FFFFFF; }
-.accent-color          { background: #9E9E9E; }
-.primary-text-color    { color: #212121; }
-.secondary-text-color  { color: #757575; }
-.divider-color         { border-color: #BDBDBD; }
+
+.dark-primary-color {
+    background: #1976D2;
+}
+
+.default-primary-color {
+    background: #2196F3;
+}
+
+.light-primary-color {
+    background: #BBDEFB;
+}
+
+.text-primary-color {
+    color: #FFFFFF;
+}
+
+.accent-color {
+    background: #9E9E9E;
+}
+
+.primary-text-color {
+    color: #212121;
+}
+
+.secondary-text-color {
+    color: #757575;
+}
+
+.divider-color {
+    border-color: #BDBDBD;
+}
+
+
 /* End of color Scheme*/
 
+
 /*  Google Font Family  */
-font-family: 'Roboto Slab', serif;
-font-family: 'Anton', sans-serif;
-font-family: 'Lobster', cursive;
-font-family: 'Montserrat', sans-serif;
+
+font-family: 'Roboto Slab',
+serif;
+font-family: 'Anton',
+sans-serif;
+font-family: 'Lobster',
+cursive;
+font-family: 'Montserrat',
+sans-serif;
+
 /* End of Google font family */

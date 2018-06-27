@@ -2,6 +2,7 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import { HtmlParser } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -13,16 +14,16 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-
 }
 
-function check() {
-  const radios = (document.getElementsByName('gender'));
+
+  function checked(): any {
+  const radios = (<HTMLFormElement> (document.getElementsByName('gender')));
 
   for (let i = 0, length = radios.length; i < length; i++) {
     if (radios[i].checked === 0) {
       calculateFemale();
-      console.log( radios[i].value);
+      console.log(radios[i].value);
       break;
     } else {
       calculatemale();
@@ -35,7 +36,7 @@ function calculateFemale() {
 
   const feetValue = parseFloat((<HTMLInputElement>document.getElementById('feetList')).value);
   const inchValue = parseFloat((<HTMLInputElement>document.getElementById('inchList')).value);
-  const pounds = (<HTMLInputElement>document.getElementById('weight')).value;
+  const pounds = parseFloat((<HTMLInputElement>document.getElementById('weight')).value);
   const ageInput = parseFloat((<HTMLInputElement>document.getElementById('age')).value);
   const activityValue = parseFloat((<HTMLInputElement>document.getElementById('activityList')).value);
 
@@ -46,7 +47,7 @@ function calculateFemale() {
   const femaleHeightTotal = ((feetValue + inchValue) * 2.54) * 3.098;
   console.log('height Inch', feetValue + inchValue);
   // Weight equation for male and female
-  const femalePoundsTotal = (pounds * 0.453592) * 9.247;
+  const femalePoundsTotal = ((pounds * 0.453592) * 9.247);
 
   // Age equation for male and female
   const  femaleAgeTotal = ageInput * 4.330;
@@ -72,7 +73,7 @@ function calculateFemale() {
   let baseBMR;
   baseBMR = (a + b + c - d);
   console.log(baseBMR);
-  document.getElementById("Answer").innerHTML = ("Your base BMR is " + baseBMR.toFixed(0) + " calories per day." + "<br>" + "To maintain your current weight at your exercise level you'll need " + result.toFixed(0) + " calories per day.");
+  document.getElementById('Answer').innerHTML = ('Your base BMR is ' + baseBMR.toFixed(0) + ' calories per day.' + '<br>' + 'To maintain your current weight at your exercise level youll need ' + result.toFixed(0) + ' calories per day.');
   document.getElementById('seePlan').style.display = 'block';
 }
 
@@ -81,7 +82,7 @@ function calculatemale() {
 
   const feetValue = parseFloat((<HTMLInputElement>document.getElementById('feetList')).value);
   const inchValue = parseFloat((<HTMLInputElement>document.getElementById('inchList')).value);
-  const pounds = (<HTMLInputElement>document.getElementById('weight')).value;
+  const pounds = parseFloat((<HTMLInputElement>document.getElementById('weight')).value);
   const ageInput = parseFloat((<HTMLInputElement>document.getElementById('age')).value);
   const activityValue = parseFloat((<HTMLInputElement>document.getElementById('activityList')).value);
 
@@ -118,7 +119,7 @@ function calculatemale() {
   baseBMR = (a + b + c - d);
   console.log(baseBMR);
 
-  document.getElementById("Answer").innerHTML = ("Your base BMR is " + baseBMR.toFixed(0) + " calories per day." + "<br>" + "To maintain your current weight at your exercise level you'll need " + result.toFixed(0) + " calories per day.");
+  document.getElementById('Answer').innerHTML = ('Your base BMR is ' + baseBMR.toFixed(0) + ' calories per day.' + '<br>' + 'To maintain your current weight at your exercise level youll need ' + result.toFixed(0) + ' calories per day.');
   document.getElementById('seePlan').style.display = 'block';
 }
 
