@@ -22,7 +22,7 @@ function check() {
   for (let i = 0, length = radios.length; i < length; i++) {
     if (radios[i].checked === 0) {
       calculateFemale();
-      console.log(radios[i].value);
+      console.log( radios[i].value);
       break;
     } else {
       calculatemale();
@@ -33,11 +33,11 @@ function check() {
 
 function calculateFemale() {
 
-  const feetValue = parseFloat(document.getElementById('feetList').value);
-  const inchValue = parseFloat(document.getElementById('inchList').value);
-  const pounds = document.getElementById('weight').value;
-  const ageInput = parseFloat(document.getElementById('age').value);
-  const activityValue = parseFloat(document.getElementById('activityList').value);
+  const feetValue = parseFloat((<HTMLInputElement>document.getElementById('feetList')).value);
+  const inchValue = parseFloat((<HTMLInputElement>document.getElementById('inchList')).value);
+  const pounds = (<HTMLInputElement>document.getElementById('weight')).value;
+  const ageInput = parseFloat((<HTMLInputElement>document.getElementById('age')).value);
+  const activityValue = parseFloat((<HTMLInputElement>document.getElementById('activityList')).value);
 
   // Gender BMR Value
   const femaleBMR = (447.593);
@@ -79,14 +79,14 @@ function calculateFemale() {
 
 function calculatemale() {
 
-  const feetValue = parseFloat(document.getElementById('feetList').value);
-  const inchValue = parseFloat(document.getElementById('inchList').value);
-  const pounds = document.getElementById('weight').value;
-  const ageInput = parseFloat(document.getElementById('age').value);
-  const activityValue = parseFloat(document.getElementById('activityList').value);
+  const feetValue = parseFloat((<HTMLInputElement>document.getElementById('feetList')).value);
+  const inchValue = parseFloat((<HTMLInputElement>document.getElementById('inchList')).value);
+  const pounds = (<HTMLInputElement>document.getElementById('weight')).value;
+  const ageInput = parseFloat((<HTMLInputElement>document.getElementById('age')).value);
+  const activityValue = parseFloat((<HTMLInputElement>document.getElementById('activityList')).value);
 
   // Gender BMR Value
-  const maleBMR = (88.362)
+  const maleBMR = (88.362);
 
   // Height Equation for male and female
   const maleHeightTotal = ((feetValue + inchValue) * 2.54) * 4.799;
@@ -124,14 +124,14 @@ function calculatemale() {
 
 // Reset form button
 function resetForm() {
-  const male = (document.getElementById('male').checked = false);
-  const female = (document.getElementById('female').checked = false);
-  const feetList = (document.getElementById('feetList').value = 'Feet');
-  const inchList = (document.getElementById('inchList').value = 'Inch');
-  const weight = (document.getElementById('weight').value = '');
-  const age = (document.getElementById('age').value = '');
-  const activityList = (document.getElementById('activityList').value = 'Activity');
-  const Answer = (document.getElementById('Answer').innerHTML = '');
+  const male = ((<HTMLInputElement>document.getElementById('male')).checked = false);
+  const female = ((<HTMLInputElement>document.getElementById('female')).checked = false);
+  const feetList = ((<HTMLInputElement>document.getElementById('feetList')).value = 'Feet');
+  const inchList = ((<HTMLInputElement>document.getElementById('inchList')).value = 'Inch');
+  const weight = ((<HTMLInputElement>document.getElementById('weight')).value = '');
+  const age = ((<HTMLInputElement>document.getElementById('age')).value = '');
+  const activityList = ((<HTMLInputElement>document.getElementById('activityList')).value = 'Activity');
+  const Answer = ((<HTMLInputElement>document.getElementById('Answer')).innerHTML = '');
 }
 
 // End
