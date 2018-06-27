@@ -155,11 +155,10 @@
   
 /* Register & Getting Started Section */
 .body-section{
-  /* background-image: url("../img/fitness-equip.jpg"); */
   background-image: url("./assets/img/gitfit-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
 }
 
 .register-form{
@@ -173,7 +172,8 @@
 
 .register-box{
   padding: 40px;
-  margin: 50% 0;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
   background-color:#fff;
   box-shadow:var(--box-shadow);
   border-radius: var(--rounded-corners);

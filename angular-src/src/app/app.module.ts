@@ -17,22 +17,35 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { ProgressComponent } from './components/progress/progress.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { Register2Component } from './components/register2/register2.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { RegisterPageComponent } from './components/register-page/register-page.component';
 
 // Service Imports
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
-import { Register2Component } from './components/register2/register2.component';
 
 const appRoutes: Routes = [
   {path:'chats', component: ChatsComponent, canActivate:[AuthGuard]},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path:'login', component: LoginComponent},
   {path:'progress', component: ProgressComponent, canActivate:[AuthGuard]},
-  {path:'register', component: RegisterComponent},
   {path:'settings', component: SettingsComponent, canActivate:[AuthGuard]},
   {path:'user-profile', component: UserProfileComponent, canActivate:[AuthGuard]},
   {path:'navbar', component: NavbarComponent},
+  {path:'register-page', 
+      component: RegisterPageComponent,
+      children: [
+            {
+                  path:'register',
+                  component: RegisterComponent
+            },
+            {
+                  path:'register2',
+                  component: Register2Component
+            }
+      ]},
   {path:'', component: HomeComponent}
 ]
 
@@ -48,7 +61,9 @@ const appRoutes: Routes = [
     ProgressComponent,
     ChatsComponent,
     SettingsComponent,
-    Register2Component
+    Register2Component,
+    FooterComponent,
+    RegisterPageComponent
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,12 @@ export class RegisterComponent implements OnInit {
   username: String;
   email: String;
   password: String;
+  
+  age: Number;
+  weight: Number;
+  goalWeight: Number;
+  height: Number;
+  activityLevel: String;
 
   constructor(
     private validateService: ValidateService,
@@ -30,7 +36,13 @@ export class RegisterComponent implements OnInit {
       name: this.name,
       email: this.email,
       username: this.username,
-      password: this.password
+      password: this.password,
+
+      age: this.age,
+      weight: this.weight,
+      goalWeight: this.goalWeight,
+      height: this.height,
+      activityLevel: this.activityLevel
     }
 
     // Required Fields
