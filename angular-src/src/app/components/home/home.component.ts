@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,128 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
+
+function check() {
+  const radios = (document.getElementsByName('gender'));
+
+  for (let i = 0, length = radios.length; i < length; i++) {
+    if (radios[i].checked === 0) {
+      calculateFemale();
+      console.log(radios[i].value);
+      break;
+    } else {
+      calculatemale();
+      break;
+    }
+  }
+}
+
+function calculateFemale() {
+
+  const feetValue = parseFloat(document.getElementById('feetList').value);
+  const inchValue = parseFloat(document.getElementById('inchList').value);
+  const pounds = document.getElementById('weight').value;
+  const ageInput = parseFloat(document.getElementById('age').value);
+  const activityValue = parseFloat(document.getElementById('activityList').value);
+
+  // Gender BMR Value
+  const femaleBMR = (447.593);
+
+  // Height Equation for male and female
+  const femaleHeightTotal = ((feetValue + inchValue) * 2.54) * 3.098;
+  console.log('height Inch', feetValue + inchValue);
+  // Weight equation for male and female
+  const femalePoundsTotal = (pounds * 0.453592) * 9.247;
+
+  // Age equation for male and female
+  const  femaleAgeTotal = ageInput * 4.330;
+
+  // BMR Total equation for activity list and Base BMR
+  const femaleBMRTotal = (activityValue);
+
+  console.log('femaleBMR', femaleBMR);
+  console.log('Height', femaleHeightTotal);
+  console.log('pounds', femalePoundsTotal);
+  console.log('age', femaleAgeTotal);
+  console.log('Activity', femaleBMRTotal);
+
+  // Calulate female calories
+  const a = (femaleBMR);
+  const b = (femaleHeightTotal);
+  const c = (femalePoundsTotal);
+  const d = (femaleAgeTotal);
+  const e = (femaleBMRTotal);
+  let result;
+  result = (a + b + c - d) * e;
+  console.log(result);
+  let baseBMR;
+  baseBMR = (a + b + c - d);
+  console.log(baseBMR);
+  document.getElementById("Answer").innerHTML = ("Your base BMR is " + baseBMR.toFixed(0) + " calories per day." + "<br>" + "To maintain your current weight at your exercise level you'll need " + result.toFixed(0) + " calories per day.");
+  document.getElementById('seePlan').style.display = 'block';
+}
+
+
+function calculatemale() {
+
+  const feetValue = parseFloat(document.getElementById('feetList').value);
+  const inchValue = parseFloat(document.getElementById('inchList').value);
+  const pounds = document.getElementById('weight').value;
+  const ageInput = parseFloat(document.getElementById('age').value);
+  const activityValue = parseFloat(document.getElementById('activityList').value);
+
+  // Gender BMR Value
+  const maleBMR = (88.362)
+
+  // Height Equation for male and female
+  const maleHeightTotal = ((feetValue + inchValue) * 2.54) * 4.799;
+
+  // Weight equation for male and female
+  const malePoundsTotal = (pounds * 0.453592) * 13.397;
+
+  // Age equation for male and female
+  const maleAgeTotal = ageInput * 5.677;
+
+  // BMR Total equation for activity list and Base BMR
+  const maleBMRTotal = (activityValue);
+  console.log(maleBMR);
+  console.log(maleHeightTotal);
+  console.log(malePoundsTotal);
+  console.log(maleAgeTotal);
+  console.log(maleBMRTotal);
+
+  // Calulate female calories
+  const a = (maleBMR);
+  const b = (maleHeightTotal);
+  const c = (malePoundsTotal);
+  const d = (maleAgeTotal);
+  const e = (maleBMRTotal);
+  let result;
+  result = (a + b + c - d) * e;
+  console.log(result);
+  let baseBMR;
+  baseBMR = (a + b + c - d);
+  console.log(baseBMR);
+
+  document.getElementById("Answer").innerHTML = ("Your base BMR is " + baseBMR.toFixed(0) + " calories per day." + "<br>" + "To maintain your current weight at your exercise level you'll need " + result.toFixed(0) + " calories per day.");
+  document.getElementById('seePlan').style.display = 'block';
+}
+
+// Reset form button
+function resetForm() {
+  const male = (document.getElementById('male').checked = false);
+  const female = (document.getElementById('female').checked = false);
+  const feetList = (document.getElementById('feetList').value = 'Feet');
+  const inchList = (document.getElementById('inchList').value = 'Inch');
+  const weight = (document.getElementById('weight').value = '');
+  const age = (document.getElementById('age').value = '');
+  const activityList = (document.getElementById('activityList').value = 'Activity');
+  const Answer = (document.getElementById('Answer').innerHTML = '');
+}
+
+// End
