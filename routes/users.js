@@ -17,7 +17,8 @@ router.post('/register-page', (req, res, next) => {
     weight: req.body.weight,
     goalWeight: req.body.goalWeight,
     height: req.bodyheight,
-    activityLevel: req.body.activityLevel
+    activityLevel: req.body.activityLevel,
+    gender: req.body.gender
   });
 
   User.addUser(newUser, (err, user) => {
@@ -54,7 +55,7 @@ router.post('/authenticate', (req, res, next) => {
             id: user._id,
             name: user.name,
             username: user.username,
-            email: user.email
+            email: user.email,
           }
         });
       } else {

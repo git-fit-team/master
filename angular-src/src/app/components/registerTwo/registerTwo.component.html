@@ -1,27 +1,42 @@
+<form  (submit)="onRegisterSubmit()" class="register-form">
+      <h2 class="text-center">Just a few more questions...</h2>
+      <div class="form-group">
+            <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" placeholder="Name">
+      </div>
+      <div class="form-group">
+            <input type="text" [(ngModel)]="username" name="username" class="form-control" id="userName" placeholder="Username">
+      </div>
+      <div class="form-group">
+            <input type="text" [(ngModel)]="email" name="email" class="form-control" id="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+            <input type="password" [(ngModel)]="password" name="password" class="form-control" id="password" placeholder="Password">
+      </div>
 
-						<form class="register-form">
-							<h2 class="text-center">Just a few more questions...</h2>
-							<div class="form-group">
-								<input class="form-control" id="age" name="age" placeholder="Age" type="text">
-							</div>
-							<div class="form-group">
-								<input class="form-control" id="weight" name="weight" placeholder="Weight" type="text">
-							</div>
-							<div class="form-group">
-								<input class="form-control" id="goalWeight" placeholder="Goal Weight" type="text">
-							</div>
-							<div class="form-group">
-								<input class="form-control" id="height" name="height" placeholder="Height" type="text">
-                                          </div>
-                                          <div class="form-group">
-                                                      <input class="form-control" id="activityLevel" placeholder="Activity Level" type="text">
-                                                </div>
-                                          <button type="submit" class="btn btn-success my-btn" value="Submit">Submit</button>
-						</form>
-						<div class="row">
-							<div class="col-md-8 col-md-offset-2 dot-indicators text-center">
-                                                <span class="dot dot-inactive"></span> 
-                                                <span class="dot dot-active"></span>
-							</div>
-						</div>
+      <div class="form-group">
+            <input class="form-control" id="age" name="age" placeholder="Age" type="text">
+      </div>
+      <div class="form-group">
+            <input class="form-control" id="weight" name="weight" placeholder="Weight" type="text">
+      </div>
+      <div class="form-group">
+            <input class="form-control" id="goalWeight" placeholder="Goal Weight" type="text">
+      </div>
+      <div class="form-group">
+            <input class="form-control" id="height" name="height" placeholder="Height" type="text">
+      </div>
+      <div class="form-group">
+            <input class="form-control" id="activityLevel" placeholder="Activity Level" type="text">
+      </div>
+      <div class="form-group">
+            <input class="form-control" id="gender" placeholder="Gender" type="text">
+      </div>
+      <button type="submit" class="btn btn-success my-btn" value="Submit">Submit</button>
+</form>
+<div class="row">
+      <div class="col-md-8 col-md-offset-2 dot-indicators text-center">
+            <span class="dot dot-inactive"></span> 
+            <span class="dot dot-active"></span>
+      </div>
+</div>
 					
