@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ValidateService } from '../../services/validate.service'
-import { AuthService } from '../../services/auth.service'
+import { ValidateService } from '../../services/validate.service';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'ngx-flash-messages';
+import { FormTransferService } from '../../services/form-transfer.service';
 
 @Component({
   selector: 'app-registerTwo',
@@ -10,6 +11,10 @@ import { FlashMessagesService } from 'ngx-flash-messages';
   styleUrls: ['./registerTwo.component.css']
 })
 export class RegisterTwoComponent implements OnInit {
+
+     public config;
+     public header = [];
+
       name: String;
       username: String;
       email: String;
@@ -25,8 +30,11 @@ export class RegisterTwoComponent implements OnInit {
       private validateService: ValidateService,
       private authService: AuthService,
       private router: Router,
-      private flashMessagesService: FlashMessagesService
-  ) { }
+      private flashMessagesService: FlashMessagesService,
+      _formTransferService: FormTransferService
+  ) {
+      this.config = _formTransferService.getConfig();
+  }
 
   ngOnInit() {
   }

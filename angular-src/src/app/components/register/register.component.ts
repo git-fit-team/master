@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormTransferService } from '../../services/form-transfer.service';
 
 @Component({
   selector: 'app-register',
@@ -12,18 +13,16 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {}
 
   onNextButtonClick() {
-      const name = document.getElementById('name');
-      console.log(name);
-      const userName = document.getElementById('userName');
-      console.log(userName);
-      const email = document.getElementById('email');
-      console.log(email);
-      const password = document.getElementById('password');
-      console.log(password);
-  }
+      const name = (<HTMLInputElement>document.getElementById('name')).value;
+      const userName = (<HTMLInputElement>document.getElementById('userName')).value;
+      const email = (<HTMLInputElement>document.getElementById('email')).value;
+      const password = (<HTMLInputElement>document.getElementById('password')).value;
 
-  CallClick(): any {
-      console.log('clicked');
+      // Calling FormTransferService to input data
+      _formTransferService.setOption('name', this.name);
+      _formTransferService.setOption('userName', this.userName);
+      _formTransferService.setOption('email', this.email);
+      _formTransferService.setOption('password', this.password);
+
   }
-  
 }
