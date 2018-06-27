@@ -17,7 +17,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { ProgressComponent } from './components/progress/progress.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { Register2Component } from './components/register2/register2.component';
+import { RegisterTwoComponent } from './components/registerTwo/registerTwo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
 
@@ -37,13 +37,18 @@ const appRoutes: Routes = [
   {path:'register-page', 
       component: RegisterPageComponent,
       children: [
+            { 
+                  path: '', 
+                  redirectTo: 'register', 
+                  pathMatch: 'full' 
+            },
             {
                   path:'register',
                   component: RegisterComponent
             },
             {
-                  path:'register2',
-                  component: Register2Component
+                  path:'registerTwo',
+                  component: RegisterTwoComponent
             }
       ]},
   {path:'', component: HomeComponent}
@@ -61,7 +66,7 @@ const appRoutes: Routes = [
     ProgressComponent,
     ChatsComponent,
     SettingsComponent,
-    Register2Component,
+    RegisterTwoComponent,
     FooterComponent,
     RegisterPageComponent
   ],
