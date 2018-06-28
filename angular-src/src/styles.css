@@ -11,47 +11,51 @@
     --rounded-corners:4px;
     --button-green:#2ED573;
   }
-  
+
   body{
     margin: 0 auto;
   }
-  
+
   p{
     font-family: var(--main-font);
   }
-  
+
   h1 h2 h3 h4 h5 h6{
   font-family: var(--main-font);
   }
-  
+
   /* Header Section */
   .header{
     height:80px;
     background-color: var(--logo-blue);
   }
-  
+
   .mynav-bar{
     margin: 0;
     padding:0 30px;
     height: 80px
   }
-  
+
+   .logo{
+     height: 50px;
+     margin: 15px 0;
+   }
   /* Homepage Hero Section */
-  
+
   .hero{
     background-image: url("./assets/img/gitfit-bg-blur.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
+
   h1{
     font-family:'Roboto';
     font-size: 56px;
     font-weight: 300;
-  
+
   }
-  
+
   .headline h1{
     margin-top: 30px;
     font-weight: 300;
@@ -59,31 +63,31 @@
     line-height:65px;
     color: #FFF;
   }
-  
+
     .hero{
       background-color: #9E9E9E;
       padding: 20px 0;
     }
-  
-  
+
+
   .start-btn{
     font-size: 30px;
     box-shadow: var(--button-shadow);
     margin: 20px 0 40px 0;
   }
-  
+
   .start-btn a{
     text-decoration: none;
     color: #FFF;
   }
-  
+
   .calorie-cal{
     width:100%;
     background-color: pink;
     height: 400px;
     margin-bottom: 20px;
   }
-  
+
   .sign-in{
     text-transform:uppercase;
     font-size: 14px;
@@ -93,13 +97,13 @@
     border: solid 1px #fff;
     font-family: var(--main-font);
     letter-spacing: .5px;
-  
+
   }
-  
+
   .sign-in a{
     color:#fff;
   }
-  
+
   /* Features Section */
   .features{
     padding: 10px 0;
@@ -109,9 +113,9 @@
     height:500px;
     margin: 20px 0;
     background-color: #E0E0E0;
-  
+
   }
-  
+
   .icons{
     font-size: 60px;
     color:var(--logo-blue);
@@ -119,40 +123,40 @@
   /* .middle-feature{
     background-color:var(--soft-grey);
   } */
-  
+
   .features-section{
     padding: 30px 0;
   }
-  
+
   .features h3{
     font-size: 35px;
     font-weight: 300;
     text-align: center;
   }
-  
+
   .features p{
     font-size: 18px;
     font-weight: 100;
     text-align: center;
   }
-  
+
   .features{
     margin: 3% 0;
     padding:0 30px;
   }
-  
+
   .fa-dumbell{
     font-size: 40px;
     text-align: center;
   }
   /* Footer Section */
-  
+
   .footer{
     background-color: var(--charcoal);
     color:#fff;
     padding: 20px 5px;
   }
-  
+
 
 /* Color Scheme*/
 .dark-primary-color    { background: #1976D2; }

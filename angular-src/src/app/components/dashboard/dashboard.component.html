@@ -1,118 +1,120 @@
 <app-navbar></app-navbar>
 
 <div class="container-fluid">
-        <!-- Header -->
-        <div class="row">
-          <div class="col-md-12 header">
+<!-- Header -->
+<div class="row">
+  <div class="col-md-12 header">
+    <div class="gf-logo">
+    <img src="./assets/img/gf-logo-white.png" class="logo" alt="">
+    </div>
+  </div>
+
+</div>
+
+<!-- Body Section -->
+<div class="row user-info-section">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="row user-profile">
+      <div class="container">
+        <div class="col-sm-3 col-sm-offset-3">
+          <div class="user-image text-center">
+          <i class="far fa-grin user-icon"></i>
           </div>
-        
+
         </div>
-        
-        <!-- Body Section -->
-        <div class="row user-info-section">
-          <div class="col-md-10 col-md-offset-1">
-            <div class="row user-profile">
-              <div class="col-md-6 col-md-offset-3">
-                <div class="col-md-6">
-                  <div class="user-image">
-                    <!-- <img src="img/gitfit-bg.jpg" alt="" class="img-responsive"> -->
-                  </div>
-        
-                </div>
-                <div class="col-md-6">
-                  <h3 class="greeting">Hello, First Name</h3>
-        
-                </div>
-        
-              </div>
-            </div>
-        
-            <div class="row data-section">
-              <div class="col-md-2 col-md-offset-1 text-center">
-                <div class="current-weight" id="currentWeight">
-                <h3 class="user-weight data-text">180 lbs</h3>
-        
-                </div>
-                <p class="small-headline">Current Weight</p>
-              </div>
-              <div class="col-md-2 text-center">
-                <div class="user-height" id="userHeight">
-                <h3 class=" data-text">5'8"</h3>
-        
-                </div>
-                <p class="small-headline">Height</p>
-              </div>
-              <div class="col-md-2 text-center">
-                <div class="user-bmi" id="userBMI">
-                <h3 class=" data-text">25.5</h3>
-        
-                </div>
-                <p class="small-headline">BMI</p>
-              </div>
-              <div class="col-md-2 text-center">
-                <div class="act-level" id="actLevel">
-                <h3 class="data-text">Beast Mode</h3>
-                </div>
-                <p class="small-headline">Activity Level</p>
-              </div>
-              <div class="col-md-2 text-center">
-                <div class="goal-weight" id="currentWeight">
-                <h3 class="data-text">200 lbs</h3>
-        
-                </div>
-                <p class="small-headline">Goal Weight</p>
-              </div>
-            </div>
-          </div>
-        
+        <div class="col-sm-3">
+          <h3 class="greeting">Hello,</h3>
+          <h3 class="user-name">First Name</h3>
+
         </div>
-        
-        <div class="row data-section">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="weight-section">
-        
-              </div>
-        
-            </div>
-        
-          </div>
-          <div class="row health-container">
-            <div class="col-md-4">
-              <div class="health-section">
-              </div>
-            </div>
-        
-            <div class="col-md-4">
-              <div class="health-section">
-              </div>
-        
-            </div>
-        
-            <div class="col-md-4">
-              <div class="health-section">
-        
-              </div>
-        
-            </div>
-        
-          </div>
-        
+
+      </div>
+    </div>
+
+    <div class="row data-section">
+      <div class="col-sm-2 col-sm-offset-1 text-center">
+        <div class="current-weight" id="currentWeight">
+        <h3 class="user-weight data-text">180 lbs</h3>
+
         </div>
-        
-        
-        
-        
-        
-        
-        <!-- Footer Section -->
-          <div class="row footer">
-          <div class="col-md-12">
-            <p class="text-center">Create by: Jeff Pendergrass, Andrew Waller and Felipe Hernandez</p>
-        
-          </div>
-          </div>
-        
-        
-        
+        <p class="small-headline">Current Weight</p>
+      </div>
+      <div class="col-sm-2 text-center">
+        <div class="user-height" id="userHeight">
+        <h3 class=" data-text">5'8"</h3>
+
         </div>
+        <p class="small-headline">Height</p>
+      </div>
+      <div class="col-sm-2 text-center">
+        <div class="user-bmi" id="userBMI">
+        <h3 class=" data-text">25.5</h3>
+
+        </div>
+        <p class="small-headline">BMI</p>
+      </div>
+      <div class="col-sm-2 text-center">
+        <div class="act-level" id="actLevel">
+        <h3 class="data-text">Beast Mode</h3>
+        </div>
+        <p class="small-headline">Activity Level</p>
+      </div>
+      <div class="col-sm-2 text-center">
+        <div class="goal-weight" id="currentWeight">
+        <h3 class="data-text">200 lbs</h3>
+
+        </div>
+        <p class="small-headline">Goal Weight</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row data-section">
+  <div class="row chart-section">
+    <div class="col-md-12 chart-container">
+      <canvas id="myChart" width="1600px" height="400px"></canvas>
+
+    </div>
+
+  </div>
+  <div class="row health-container">
+    <div class="col-md-4">
+      <div class="health-section">
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="health-section">
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="health-section">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+<!-- Footer Section -->
+  <div class="row footer">
+  <div class="col-md-12">
+    <p class="text-center">Create by: Jeff Pendergrass, Andrew Waller and Felipe Hernandez</p>
+
+  </div>
+  </div>
+
+
+
+</div>
