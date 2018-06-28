@@ -18,6 +18,24 @@ const UserSchema = mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  age: {
+    type: String
+  },
+  weight: {
+      type: String
+  },
+  goalWeight: {
+      type: String
+  },
+  height: {
+      type: String
+  },
+  activityLevel: {
+      type: String
+  },
+  gender: {
+      type: String
   }
 });
 

@@ -6,13 +6,12 @@ const config = require('../config/database');
 const User = require('../models/user');
 
 // Register
-router.post('/register-page', (req, res, next) => {
+router.post('/register', (req, res, next) => {
   let newUser = new User({
     name: req.body.name,
     email: req.body.email,
     username: req.body.username,
     password: req.body.password,
-    
     age: req.body.age,
     weight: req.body.weight,
     goalWeight: req.body.goalWeight,

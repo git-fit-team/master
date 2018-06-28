@@ -17,9 +17,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { ProgressComponent } from './components/progress/progress.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { RegisterTwoComponent } from './components/registerTwo/registerTwo.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { RegisterPageComponent } from './components/register-page/register-page.component';
 
 // Service Imports
 import { ValidateService } from './services/validate.service';
@@ -37,23 +35,7 @@ const appRoutes: Routes = [
   {path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
   {path: 'user-profile', component: UserProfileComponent, canActivate: [AuthGuard]},
   {path: 'navbar', component: NavbarComponent},
-  {path: 'register-page',
-      component: RegisterPageComponent,
-      children: [
-            {
-                  path: '',
-                  redirectTo: 'register',
-                  pathMatch: 'full'
-            },
-            {
-                  path: 'register',
-                  component: RegisterComponent
-            },
-            {
-                  path: 'registerTwo',
-                  component: RegisterTwoComponent
-            }
-      ]},
+  {path: 'register', component: RegisterComponent},
   {path: '', component: HomeComponent}
 ];
 
@@ -69,9 +51,7 @@ const appRoutes: Routes = [
     ProgressComponent,
     ChatsComponent,
     SettingsComponent,
-    RegisterTwoComponent,
-    FooterComponent,
-    RegisterPageComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

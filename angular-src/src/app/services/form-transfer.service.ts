@@ -1,18 +1,36 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class FormTransferService {
+    myMethod$: Observable<any>;
+    private myMethodSubject = new Subject<any>();
 
-      private config = {};
+      public form = [
+            'name',
+            'username',
+            'email',
+            'password'
+      ];
 
       setOption(option, value) {
-          this.config[option] = value;
+           this.form[option] = value;
       }
 
-      getConfig() {
-          return this.config;
+      getForm() {
+          console.log('works');
+          console.log(this.form);
+          return this.form;
       }
 
-  constructor() { }
+  constructor() {
+      this.myMethod$ = this.myMethodSubject.asObservable();
+  }
+
+  myMethod(data) {
+      console.log(data);
+      this.myMethodSubject.next(data);
+  }
 
 }
