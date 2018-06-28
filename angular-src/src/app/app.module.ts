@@ -17,23 +17,27 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { ProgressComponent } from './components/progress/progress.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 // Service Imports
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
+import { FormTransferService } from './services/form-transfer.service';
+
+// Guard Imports
 import { AuthGuard } from './guards/auth.guard';
 
 const appRoutes: Routes = [
-  {path:'chats', component: ChatsComponent, canActivate:[AuthGuard]},
-  {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path:'login', component: LoginComponent},
-  {path:'progress', component: ProgressComponent, canActivate:[AuthGuard]},
-  {path:'register', component: RegisterComponent},
-  {path:'settings', component: SettingsComponent, canActivate:[AuthGuard]},
-  {path:'user-profile', component: UserProfileComponent, canActivate:[AuthGuard]},
-  {path:'navbar', component: NavbarComponent},
-  {path:'', component: HomeComponent}
-]
+  {path: 'chats', component: ChatsComponent, canActivate: [AuthGuard]},
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  {path: 'login', component: LoginComponent},
+  {path: 'progress', component: ProgressComponent, canActivate: [AuthGuard]},
+  {path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
+  {path: 'user-profile', component: UserProfileComponent, canActivate: [AuthGuard]},
+  {path: 'navbar', component: NavbarComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: '', component: HomeComponent}
+];
 
 @NgModule({
   declarations: [
@@ -46,7 +50,8 @@ const appRoutes: Routes = [
     UserProfileComponent,
     ProgressComponent,
     ChatsComponent,
-    SettingsComponent
+    SettingsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,7 @@ const appRoutes: Routes = [
     FlashMessagesModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ValidateService, AuthService, AuthGuard],
+  providers: [ValidateService, AuthService, FormTransferService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
