@@ -15,7 +15,7 @@ router.post('/register', (req, res, next) => {
     age: req.body.age,
     weight: req.body.weight,
     goalWeight: req.body.goalWeight,
-    height: req.bodyheight,
+    height: req.body.height,
     activityLevel: req.body.activityLevel,
     gender: req.body.gender
   });

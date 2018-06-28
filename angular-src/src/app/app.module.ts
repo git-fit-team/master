@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule} from '@angular/forms';
 import { FlashMessagesModule } from 'ngx-flash-messages';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 // Component Imports
 import { AppComponent } from './app.component';
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     FlashMessagesModule,
+    ChartsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ValidateService, AuthService, FormTransferService, AuthGuard],
