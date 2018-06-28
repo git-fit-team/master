@@ -74,7 +74,18 @@
 <div class="row data-section">
   <div class="row chart-section">
     <div class="col-md-12 chart-container">
-      <canvas id="myChart" width="1600px" height="400px"></canvas>
+      <!-- <canvas id="myChart" width="1600px" height="400px"></canvas> -->
+      <div style="width:80%;">
+    <canvas
+        baseChart
+        [chartType]="'line'"
+        [datasets]="chartData"
+        [labels]="chartLabels"
+        [options]="chartOptions"
+        [legend]="true"
+        (chartClick)="onChartClick($event)">
+    </canvas>
+  </div>
 
     </div>
 
