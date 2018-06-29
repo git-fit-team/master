@@ -17,11 +17,10 @@ export class HomeComponent implements OnInit {
 }
 
 
-  function checked(): any {
-  const radios = (<HTMLFormElement> (document.getElementsByName('gender')));
-
+  function checked() {
+  const radios = (<HTMLFormElement>(document.getElementsByName('gender')));
   for (let i = 0, length = radios.length; i < length; i++) {
-    if (radios[i].checked === 0) {
+    if (radios[i].value === 0) {
       calculateFemale();
       console.log(radios[i].value);
       break;
