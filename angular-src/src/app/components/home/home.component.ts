@@ -15,13 +15,10 @@ export class HomeComponent implements OnInit {
   checkButton() {
   const radios = (<HTMLFormElement>(document.getElementsByName('gender')));
   console.log(radios);
-  debugger;
   for (let i = 0, length = radios.length; i < length; i++) {
     if (radios[i].checked === false) {
-      debugger;
       this.calculateFemale();
       console.log(radios[i].value);
-      break;
     } else {
       this.calculatemale();
       break;
