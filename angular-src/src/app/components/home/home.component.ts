@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
     if (radios[i].checked === false) {
       this.calculateFemale();
       console.log(radios[i].value);
+      break;
     } else {
       this.calculatemale();
       break;
