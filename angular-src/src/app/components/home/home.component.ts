@@ -14,24 +14,25 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-}
 
-
-  function checked() {
+  checkButton() {
   const radios = (<HTMLFormElement>(document.getElementsByName('gender')));
+  console.log(radios);
+  debugger;
   for (let i = 0, length = radios.length; i < length; i++) {
-    if (radios[i].value === 0) {
-      calculateFemale();
+    if (radios[i].checked === false) {
+      debugger;
+      this.calculateFemale();
       console.log(radios[i].value);
       break;
     } else {
-      calculatemale();
+      this.calculatemale();
       break;
     }
   }
 }
 
-function calculateFemale() {
+ calculateFemale() {
 
   const feetValue = parseFloat((<HTMLInputElement>document.getElementById('feetList')).value);
   const inchValue = parseFloat((<HTMLInputElement>document.getElementById('inchList')).value);
@@ -77,7 +78,7 @@ function calculateFemale() {
 }
 
 
-function calculatemale() {
+ calculatemale() {
 
   const feetValue = parseFloat((<HTMLInputElement>document.getElementById('feetList')).value);
   const inchValue = parseFloat((<HTMLInputElement>document.getElementById('inchList')).value);
@@ -123,7 +124,7 @@ function calculatemale() {
 }
 
 // Reset form button
-function resetForm() {
+ resetForm() {
   const male = ((<HTMLInputElement>document.getElementById('male')).checked = false);
   const female = ((<HTMLInputElement>document.getElementById('female')).checked = false);
   const feetList = ((<HTMLInputElement>document.getElementById('feetList')).value = 'Feet');
@@ -134,4 +135,5 @@ function resetForm() {
   const Answer = ((<HTMLInputElement>document.getElementById('Answer')).innerHTML = '');
 }
 
+}
 // End

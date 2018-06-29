@@ -21,6 +21,7 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "@angular/cli": "^6.0.8"
+    "@angular/cli": "^6.0.8",
+    "webpack": "^4.12.1"
   }
 }
