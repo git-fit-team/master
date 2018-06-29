@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
       classes: ['alert-success'],
       timeout: 3000
     });
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
     return false;
   }  
 

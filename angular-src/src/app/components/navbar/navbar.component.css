@@ -7,11 +7,10 @@
 }
 
 .navColor {
-    color: var(--soft-grey);
+    color: whitesmoke;
 }
 
 .logo {
     height: 60px;
-    margin-top: -28px;
-    margin-right: 28px;
+    margin-top: -1em;
 }

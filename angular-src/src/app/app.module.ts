@@ -23,7 +23,6 @@ import { FooterComponent } from './components/footer/footer.component';
 // Service Imports
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
-import { FormTransferService } from './services/form-transfer.service';
 
 // Guard Imports
 import { AuthGuard } from './guards/auth.guard';
@@ -62,7 +61,7 @@ const appRoutes: Routes = [
     ChartsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ValidateService, AuthService, FormTransferService, AuthGuard],
+  providers: [ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

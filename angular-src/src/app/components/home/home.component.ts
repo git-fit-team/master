@@ -1,7 +1,7 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../services/auth.service';
+import {Router} from '@angular/router';
+import { FlashMessagesService } from 'ngx-flash-messages';
 import { HtmlParser } from '@angular/compiler';
 
 @Component({
@@ -11,9 +11,24 @@ import { HtmlParser } from '@angular/compiler';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() {}
+  constructor(
+    private authService:AuthService,
+    private flashMessagesService: FlashMessagesService,
+    private router:Router
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+
+  onLogoutClick(){
+    this.authService.logout();
+    this.flashMessagesService.show('You are now logged out', {
+      classes: ['alert-success'],
+      timeout: 3000
+    });
+    this.router.navigate(['/']);
+    return false;
+  }
 
   checkButton() {
   const radios = (<HTMLFormElement>(document.getElementsByName('gender')));
