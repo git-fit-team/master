@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 import { HtmlParser } from '@angular/compiler';
 
 @Component({
@@ -15,10 +18,13 @@ export class HomeComponent implements OnInit {
   checkButton() {
   const radios = (<HTMLFormElement>(document.getElementsByName('gender')));
   console.log(radios);
+  debugger;
   for (let i = 0, length = radios.length; i < length; i++) {
     if (radios[i].checked === false) {
+      debugger;
       this.calculateFemale();
       console.log(radios[i].value);
+      break;
     } else {
       this.calculatemale();
       break;
@@ -114,6 +120,7 @@ export class HomeComponent implements OnInit {
   console.log(baseBMR);
 
   document.getElementById('Answer').innerHTML = ('Your base BMR is ' + baseBMR.toFixed(0) + ' calories per day.' + '<br>' + 'To maintain your current weight at your exercise level youll need ' + result.toFixed(0) + ' calories per day.');
+  document.getElementById('seePlan').style.display = 'block';
 }
 
 // Reset form button
