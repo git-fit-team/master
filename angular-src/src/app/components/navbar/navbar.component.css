@@ -1,3 +1,17 @@
 .navbar {
     margin-bottom: 0px;
 }
+
+.blueNav {
+    background-color: var(--logo-blue);
+}
+
+.navColor {
+    color: var(--soft-grey);
+}
+
+.logo {
+    height: 60px;
+    margin-top: -28px;
+    margin-right: 28px;
+}
