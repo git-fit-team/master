@@ -1,7 +1,4 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HtmlParser } from '@angular/compiler';
 
 @Component({
@@ -120,7 +117,6 @@ export class HomeComponent implements OnInit {
   console.log(baseBMR);
 
   document.getElementById('Answer').innerHTML = ('Your base BMR is ' + baseBMR.toFixed(0) + ' calories per day.' + '<br>' + 'To maintain your current weight at your exercise level youll need ' + result.toFixed(0) + ' calories per day.');
-  document.getElementById('seePlan').style.display = 'block';
 }
 
 // Reset form button
