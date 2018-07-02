@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
   }
 }
 
+
  calculateFemale() {
 
   const feetValue = parseFloat((<HTMLInputElement>document.getElementById('feetList')).value);

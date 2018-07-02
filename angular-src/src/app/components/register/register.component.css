@@ -1,0 +1,43 @@
+.gender-row {
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    margin: 17px;
+    margin-left: 0px;
+    padding-top: 7px;
+    padding-bottom: 13px;
+    width: 100%;
+    color: gray;
+}
+
+.col4 {
+    margin-top: 0px;
+}
+
+.height-row {
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    margin: 17px;
+    margin-left: 0px;
+    padding-top: 7px;
+    padding-bottom: 0px;
+    width: 100%;
+    color: gray;
+    justify-content: flex-start !important;
+}
+
+.radio-box {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.activity-row {
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    margin: 17px;
+    margin-left: 0px;
+    padding-top: 7px;
+    padding-bottom: 0px;
+    width: 100%;
+    color: gray;
+    justify-content: flex-start !important;
+}

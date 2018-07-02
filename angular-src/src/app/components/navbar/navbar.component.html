@@ -1,35 +1,35 @@
 <nav class="navbar navbar-expand-lg blueNav">
-            <img class="logo" src="assets/img/logo-white.png" alt="Git Git Logo">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a href="index.html"><img class="logo" src="assets/img/logo-white.png" alt="Git Git Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                 <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/dashboard">Dashboard</a>
-                  </li> 
-                <li class="nav-item">
-                  <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/chats">Chats</a>
-                </li> 
-                <li class="nav-item">
-                    <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/progress">Progress</a>
-                </li> 
-                <li class="nav-item">
-                  <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/settings">Settings</a>
-                </li> 
-                <li class="nav-item">
-                  <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/user-profile">Profile</a>
-                </li> 
-                <li class="nav-item">
-                  <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/" (click)="onLogoutClick()">Logout</a>
-                </li>
-                <li class="nav-item">
-                  <a *ngIf="!authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/login">Login</a>
-                </li> 
-                <li class="nav-item">
-                  <a *ngIf="!authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/register">Register</a>
-                </li> 
-              </ul>
-            </div>
-          </nav>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/chats">Chats</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/progress">Progress</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/settings">Settings</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/user-profile">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/" (click)="onLogoutClick()">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="!authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="!authService.loggedIn()" class="nav-link navColor" href="#" routerLink="/register">Register</a>
+            </li>
+        </ul>
+    </div>
+</nav>

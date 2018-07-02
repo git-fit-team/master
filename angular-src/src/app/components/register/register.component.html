@@ -2,47 +2,106 @@
 <ngx-flash-messages></ngx-flash-messages>
 
 <div class="container-fluid">
-      <div class="row body-section">
-            <div class="col-md-4 col-md-offset-4">
-                  <div class="col-md-12 register-section">
-                        <div class="register-box">
-                              <form (submit)="onRegisterSubmit()" class="register-form">
-                                    <h2 class="text-center">Welcome! Lets get you started!</h2>
-                                    <div class="form-group">
-                                          <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" placeholder="Name">
-                                    </div>
-                                    <div class="form-group">
-                                          <input type="text" [(ngModel)]="username" name="username" class="form-control" id="username" placeholder="Username">
-                                    </div>
-                                    <div class="form-group">
-                                          <input type="text" [(ngModel)]="email" name="email" class="form-control" id="email" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                          <input type="password" [(ngModel)]="password" name="password" class="form-control" id="password" placeholder="Password">
-                                    </div>
-                                    <div class="form-group">
-                                          <input [(ngModel)]="age" class="form-control" id="age" name="age" placeholder="Age" type="text">
-                                    </div>
-                                    <div class="form-group">
-                                          <input [(ngModel)]="weight" class="form-control" id="weight" name="weight" placeholder="Weight" type="text">
-                                    </div>
-                                    <div class="form-group">
-                                          <input [(ngModel)]="goalWeight" class="form-control" id="goalWeight" name="goalWeight" placeholder="Goal Weight" type="text">
-                                    </div>
-                                    <div class="form-group">
-                                          <input [(ngModel)]="height" class="form-control" id="height" name="height" placeholder="Height" type="text">
-                                    </div>
-                                    <div class="form-group">
-                                          <input [(ngModel)]="activityLevel" class="form-control" id="activityLevel" name="activityLevel" placeholder="Activity Level" type="text">
-                                    </div>
-                                    <div class="form-group">
-                                          <input [(ngModel)]="gender" class="form-control" id="gender" name="gender" placeholder="Gender" type="text">
-                                    </div>
-                                    <button type="submit" class="btn btn-success my-btn" value="Submit">Submit</button>
-                              </form>
+    <div class="row body-section">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-12 register-section">
+                <div class="register-box">
+                    <form (submit)="onRegisterSubmit()" class="register-form">
+                        <h2 class="text-center">Welcome! Lets get you started!</h2>
+                        <div class="form-group">
+                            <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" placeholder="Name">
                         </div>
-                  </div>
+                        <div class="form-group">
+                            <input type="text" [(ngModel)]="username" name="username" class="form-control" id="username" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" [(ngModel)]="email" name="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" [(ngModel)]="password" name="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+
+                        <div class="form-group">
+                            <input [(ngModel)]="age" class="form-control" id="age" name="age" placeholder="Age" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input [(ngModel)]="weight" class="form-control" id="weight" name="weight" placeholder="Weight" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input [(ngModel)]="goalWeight" class="form-control" id="goalWeight" name="goalWeight" placeholder="Goal Weight" type="text">
+                        </div>
+                        <div class="gender-row">
+                            <div class="col-md-3 form-background ">
+                                <p class="form-title ">Gender</p>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2 gender-col">
+                                    <label class="radio-inline">
+                                      <input [(ngModel)]="gender" name="gender" id="input-gender-male" value="Male" type="radio" />Male
+                                    </label>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label class="radio-inline">
+                                      <input [(ngModel)]="gender" name="gender" id="input-gender-female" value="Female" type="radio" />Female
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center height-row">
+                            <div class="col-md-3 form-background ">
+                                <p class="form-title ">Height</p>
+                            </div>
+                            <div class="col-md-2 form-background col4 ">
+                                <select [(ngModel)]="feetList" class="form-control radio-box" id="feetList ">
+                          <option data-hidden="true ">Feet</option>
+                          <option value="36 ">3</option>
+                          <option value="48 ">4</option>
+                          <option value="60 ">5</option>
+                          <option value="72 ">6</option>
+                          <option value="84 ">7</option>
+                        </select>
+                            </div>
+                            <div class="col-md-2 form-background col4 ">
+                                <select [(ngModel)]="inchList" class="form-control radio-box" id="inchList ">
+                          <option data-hidden="true ">Inch</option>
+                          <option value="0 ">0</option>
+                          <option value="1 ">1</option>
+                          <option value="2 ">2</option>
+                          <option value="3 ">3</option>
+                          <option value="4 ">4</option>
+                          <option value="5 ">5</option>
+                          <option value="6 ">6</option>
+                          <option value="7 ">7</option>
+                          <option value="8 ">8</option>
+                          <option value="9 ">9</option>
+                          <option value="10 ">10</option>
+                          <option value="11 ">11</option>
+                        </select>
+                            </div>
+                        </div>
+                        <!-- Start of Activity Level Section -->
+                        <div class="row justify-content-center activity-row">
+                            <div class="col-md-3 form-background ">
+                                <p class="form-title ">Activity Level</p>
+                            </div>
+                            <div class="col-md-4 form-background col4 ">
+                                <select [(ngModel)]="activityList" class="form-control radio-box" id="activityList ">
+                          <option data-hidden="true ">Activity</option>
+                          <option id="activeNone " value="1.2 ">Couch Potatoe (Little to no excercise)</option>
+                          <option id="activeLow " value="1.375 ">Low Active (Excercise 1-3 times per week)</option>
+                          <option id="activeMod " value="1.55 "> Moderate Active (Excercise 3-5 times per week)</option>
+                          <option id="activeVery " value="1.7 "> Very Active (Excercise 6-7 times per week)</option>
+                          <option id="activeExtra " value="1.9 "> Beast Mode (Excercise twice daily)</option>
+                        </select>
+                            </div>
+                        </div>
+                        <!-- End of Activity Level Section -->
+
+                        <button type="submit" class="btn btn-success my-btn" value="Submit">Submit</button>
+                    </form>
+                </div>
             </div>
-      </div>
+        </div>
+    </div>
 </div>
 <app-footer></app-footer>
