@@ -34,23 +34,22 @@
                     <div class="container-fluid ">
                         <div class="row justify-content-center ">
                             <div class="col-md-4 form-background ">
-                                <h3 class="form-title ">Gender</h3>
+                                <p class="form-title ">Gender</p>
                             </div>
-                            <div class="col-md-4 form-background col4 ">
-                                <div class="form-check-inline ">
-                                    <label class="form-check-label ">
-                    <input class="form-check-input " type="radio " name="gender " id="male " value="1">
-                    <font size="3 ">Male</font>
-                  </label>
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <label class="radio-inline">
+                                      <input [(ngModel)]="gender" name="gender" id="input-gender-male" value="Male" type="radio" />Male
+                                    </label>
                                 </div>
-                                <div class="form-check-inline ">
-                                    <label class="form-check-label ">
-                    <input class="form-check-input " type="radio " name="gender " id="female " value="0">
-                    <font size="3 ">Female</font>
-                  </label>
+                                <div class="col-md-5">
+                                    <label class="radio-inline">
+                                      <input [(ngModel)]="gender" name="gender" id="input-gender-female" value="Female" type="radio" />Female
+                                    </label>
                                 </div>
                             </div>
                         </div>
+                    </div>
                         <!-- End of Gender Row   -->
 
                         <!-- Start of Height Row -->

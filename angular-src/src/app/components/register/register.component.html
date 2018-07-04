@@ -52,7 +52,7 @@
                                 <p class="form-title ">Height</p>
                             </div>
                             <div class="col-md-2 form-background col4 ">
-                                <select [(ngModel)]="feetList" class="form-control radio-box" id="feetList ">
+                                <select [(ngModel)]="feetList" name ="feet" class="form-control radio-box" id="feetList ">
                           <option data-hidden="true ">Feet</option>
                           <option value="36 ">3</option>
                           <option value="48 ">4</option>
@@ -62,7 +62,7 @@
                         </select>
                             </div>
                             <div class="col-md-2 form-background col4 ">
-                                <select [(ngModel)]="inchList" class="form-control radio-box" id="inchList ">
+                                <select [(ngModel)]="inchList" name="inchList" class="form-control radio-box" id="inchList ">
                           <option data-hidden="true ">Inch</option>
                           <option value="0 ">0</option>
                           <option value="1 ">1</option>
@@ -85,7 +85,7 @@
                                 <p class="form-title ">Activity Level</p>
                             </div>
                             <div class="col-md-4 form-background col4 ">
-                                <select [(ngModel)]="activityList" class="form-control radio-box" id="activityList ">
+                                <select name="activityList" [(ngModel)]="activityList" class="form-control radio-box" id="activityList ">
                           <option data-hidden="true ">Activity</option>
                           <option id="activeNone " value="1.2 ">Couch Potatoe (Little to no excercise)</option>
                           <option id="activeLow " value="1.375 ">Low Active (Excercise 1-3 times per week)</option>
