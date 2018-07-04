@@ -15,10 +15,10 @@ export class RegisterComponent implements OnInit {
      private username: String;
      private email: String;
      private password: String;
-     private age: String;
-     private weight: String;
-     private goalWeight: String;
-     private height: String;
+     private age: Number;
+     private weight: Number;
+     private goalWeight: Number;
+     private height: Number;
      private activityLevel: String;
      private gender: String;
 
@@ -63,9 +63,6 @@ export class RegisterComponent implements OnInit {
        });
        return false;
      }
-     
-     // Check for existing email & username
-     
 
      // Register user
      this.authService.registerUser(user).subscribe(data => {

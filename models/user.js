@@ -20,16 +20,16 @@ const UserSchema = mongoose.Schema({
     required: true
   },
   age: {
-    type: String
+    type: Number
   },
   weight: {
-      type: String
+      type: Number
   },
   goalWeight: {
-      type: String
+      type: Number
   },
   height: {
-      type: String
+      type: Number
   },
   activityLevel: {
       type: String
