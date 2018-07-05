@@ -3,11 +3,11 @@
 }
 
 .blueNav {
-    background-color: var(--logo-blue);
+    background-color: var(--logo-blue, #1B9CFC);
 }
 
 .navColor {
-    color: var(--soft-grey);
+    color: var(--soft-grey,#F1F2F6 );
 }
 
 .logo {
