@@ -69,8 +69,8 @@ h1 {
     padding: 20px 0;
 }
 
-.hero-content{
-  margin-top: 50px;
+.hero-content {
+    margin-top: 50px;
 }
 
 .start-btn {
@@ -86,14 +86,14 @@ h1 {
 
 .calorie-cal {
     max-width: 520px;
-    background-color:var(--soft-grey);
+    background-color: var(--soft-grey);
     margin-bottom: 20px;
     padding: 20px 0;
     border-radius: 10px;
 }
 
-.sign-in{
-    text-transform:uppercase;
+.sign-in {
+    text-transform: uppercase;
     text-align: right;
     font-size: 14px;
     text-decoration: none;
@@ -102,14 +102,12 @@ h1 {
     border: solid 3px #fff;
     font-family: var(--main-font);
     letter-spacing: .5px;
-    color:#fff;
+    color: #fff;
+}
 
-
-  }
-
-  .sign-in a{
-    color:#fff;
-  }
+.sign-in a {
+    color: #fff;
+}
 
 
 /* Features Section */
@@ -168,58 +166,60 @@ h1 {
     background-color: var(--charcoal);
     color: #fff;
     padding: 20px 5px;
+}
 
-  }
-  
+
 /* Register & Getting Started Section */
-.body-section{
-  background-image: url("./assets/img/gitfit-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.body-section {
+    background-image: url("./assets/img/gitfit-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.register-form{
-  font-family: var(--main-font);
-  font-weight: 300;
+.register-form {
+    font-family: var(--main-font);
+    font-weight: 300;
 }
 
-.register-form h2{
-  padding-bottom: 40px;
+.register-form h2 {
+    padding-bottom: 40px;
 }
 
-.register-box{
-  padding: 40px;
-  margin-top: 20vh;
-  margin-bottom: 20vh;
-  background-color:#fff;
-  box-shadow:var(--box-shadow);
-  border-radius: var(--rounded-corners);
+.register-box {
+    padding: 40px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--rounded-corners);
 }
 
-.my-btn{
-  font-size: 20px;
-  box-shadow: var(--button-shadow);
-  text-align: center;
-  width:100%;
-  font-family: var(--main-font);
-  background-color: var(--button-green);
+.my-btn {
+    font-size: 20px;
+    box-shadow: var(--button-shadow);
+    text-align: center;
+    width: 100%;
+    font-family: var(--main-font);
+    background-color: var(--button-green);
 }
 
-.dot{
- width: 12px;
- height:12px;
- border-radius: 50%;
- display: inline-block;
- background-color:var(--soft-grey);
- margin: 0 5px;
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--soft-grey);
+    margin: 0 5px;
 }
 
-.dot-active{
-  background-color: var(--button-green);
+.dot-active {
+    background-color: var(--button-green);
 }
-.dot-indicators{
-  margin-top: 20px;
+
+.dot-indicators {
+    margin-top: 20px;
 }
 
 
