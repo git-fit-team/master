@@ -13,7 +13,8 @@ export class ValidateService {
             user.age  === undefined ||
             user.weight === undefined ||
             user.goalWeight === undefined ||
-            user.height === undefined ||
+            user.feetList === undefined ||
+            user.inchList === undefined ||
             user.activityLevel === undefined ||
             user.gender === undefined) {
       return false;

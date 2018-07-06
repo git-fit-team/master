@@ -15,12 +15,12 @@ export class RegisterComponent implements OnInit {
      private username: String;
      private email: String;
      private password: String;
-     private age: String;
-     private weight: String;
-     private goalWeight: String;
-     private height: String;
-     private activityLevel: String;
-     private gender: String;
+     private age: Number;
+     private weight: Number;
+     private goalWeight: Number;
+     private height: Number;
+     private activityLevel: Number;
+     private gender: Boolean;
 
   constructor(
       private validateService: ValidateService,
@@ -51,7 +51,7 @@ export class RegisterComponent implements OnInit {
      if (!this.validateService.validateRegister(user)) {
        this.flashMessagesService.show('Please fill out all of the fields.', {
          classes: ['alert-warning'],
-         timeout: 3000
+         timeout: 7000
        });
        return false;
      }
@@ -59,7 +59,7 @@ export class RegisterComponent implements OnInit {
      if (!this.validateService.validateEmail(user.email)) {
        this.flashMessagesService.show('Please use a valid email.', {
          classes: ['alert-warning'],
-         timeout: 3000
+         timeout: 5000
        });
        return false;
      }

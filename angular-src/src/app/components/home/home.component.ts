@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 import { HtmlParser } from '@angular/compiler';
 
 @Component({
@@ -14,9 +17,11 @@ export class HomeComponent implements OnInit {
 
   checkButton() {
   const radios = (<HTMLFormElement>(document.getElementsByName('gender')));
+  console.log(radios);
   for (let i = 0, length = radios.length; i < length; i++) {
     if (radios[i].checked === false) {
       this.calculateFemale();
+      console.log(radios[i].value);
       break;
     } else {
       this.calculatemale();
@@ -24,7 +29,6 @@ export class HomeComponent implements OnInit {
     }
   }
 }
-
 
  calculateFemale() {
 
@@ -39,7 +43,7 @@ export class HomeComponent implements OnInit {
 
   // Height Equation for male and female
   const femaleHeightTotal = ((feetValue + inchValue) * 2.54) * 3.098;
-
+  console.log('height Inch', feetValue + inchValue);
   // Weight equation for male and female
   const femalePoundsTotal = ((pounds * 0.453592) * 9.247);
 
@@ -49,6 +53,12 @@ export class HomeComponent implements OnInit {
   // BMR Total equation for activity list and Base BMR
   const femaleBMRTotal = (activityValue);
 
+  console.log('femaleBMR', femaleBMR);
+  console.log('Height', femaleHeightTotal);
+  console.log('pounds', femalePoundsTotal);
+  console.log('age', femaleAgeTotal);
+  console.log('Activity', femaleBMRTotal);
+
   // Calulate female calories
   const a = (femaleBMR);
   const b = (femaleHeightTotal);
@@ -57,9 +67,12 @@ export class HomeComponent implements OnInit {
   const e = (femaleBMRTotal);
   let result;
   result = (a + b + c - d) * e;
+  console.log(result);
   let baseBMR;
   baseBMR = (a + b + c - d);
+  console.log(baseBMR);
   document.getElementById('Answer').innerHTML = ('Your base BMR is ' + baseBMR.toFixed(0) + ' calories per day.' + '<br>' + 'To maintain your current weight at your exercise level youll need ' + result.toFixed(0) + ' calories per day.');
+  document.getElementById('seePlan').style.display = 'block';
 }
 
 
@@ -85,6 +98,11 @@ export class HomeComponent implements OnInit {
 
   // BMR Total equation for activity list and Base BMR
   const maleBMRTotal = (activityValue);
+  console.log(maleBMR);
+  console.log(maleHeightTotal);
+  console.log(malePoundsTotal);
+  console.log(maleAgeTotal);
+  console.log(maleBMRTotal);
 
   // Calulate female calories
   const a = (maleBMR);
@@ -94,9 +112,13 @@ export class HomeComponent implements OnInit {
   const e = (maleBMRTotal);
   let result;
   result = (a + b + c - d) * e;
+  console.log(result);
   let baseBMR;
   baseBMR = (a + b + c - d);
+  console.log(baseBMR);
+
   document.getElementById('Answer').innerHTML = ('Your base BMR is ' + baseBMR.toFixed(0) + ' calories per day.' + '<br>' + 'To maintain your current weight at your exercise level youll need ' + result.toFixed(0) + ' calories per day.');
+  document.getElementById('seePlan').style.display = 'block';
 }
 
 // Reset form button
