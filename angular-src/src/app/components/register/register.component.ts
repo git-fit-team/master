@@ -15,10 +15,10 @@ export class RegisterComponent implements OnInit {
      private username: String;
      private email: String;
      private password: String;
-     private age: Number;
-     private weight: Number;
-     private goalWeight: Number;
-     private height: Number;
+     private age: String;
+     private weight: String;
+     private goalWeight: String;
+     private height: String;
      private activityLevel: String;
      private gender: String;
 

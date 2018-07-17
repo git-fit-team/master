@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+// Changed oninit to afterviewinit so charts will load with dom
+import * as Chart from 'chart.js'
+
 
 @Component({
   selector: 'app-progress',
   templateUrl: './progress.component.html',
   styleUrls: ['./progress.component.css']
 })
-export class ProgressComponent implements OnInit {
+export class ProgressComponent implements AfterViewInit {
 
-  // lineChart
+/*  // lineChart
   public lineChartData: Array<any> = [
       {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
       {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
@@ -65,10 +68,35 @@ export class ProgressComponent implements OnInit {
     public chartHovered(e: any): void {
       console.log(e);
     }
+*/
 
-  constructor() { }
+ 
+canvas: any;
+ctx: any;
 
-  ngOnInit() {
-  }
+ngAfterViewInit() {
+  this.canvas = document.getElementById('myChart');
+  this.ctx = this.canvas.getContext('2d');
+  let myChart = new Chart(this.ctx, {
+    type: 'pie',
+    data: {
+        labels: ["New", "In Progress", "On Hold"],
+        datasets: [{
+            label: '# of Votes',
+            data: [1,2,3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+      responsive: false
+    }
+  });
+}
+
 
 }
