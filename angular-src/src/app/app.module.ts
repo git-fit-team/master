@@ -27,8 +27,10 @@ import { FormTransferService } from './services/form-transfer.service';
 
 // Guard Imports
 import { AuthGuard } from './guards/auth.guard';
+import { ChartTestComponent } from './components/chart-test/chart-test.component';
 
 const appRoutes: Routes = [
+  {path: 'chart', component: ChartTestComponent},
   {path: 'chats', component: ChatsComponent, canActivate: [AuthGuard]},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
@@ -52,7 +54,8 @@ const appRoutes: Routes = [
     ProgressComponent,
     ChatsComponent,
     SettingsComponent,
-    FooterComponent
+    FooterComponent,
+    ChartTestComponent
   ],
   imports: [
     BrowserModule,
