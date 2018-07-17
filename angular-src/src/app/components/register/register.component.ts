@@ -63,9 +63,6 @@ export class RegisterComponent implements OnInit {
        });
        return false;
      }
-     
-     // Check for existing email & username
-     
 
      // Register user
      this.authService.registerUser(user).subscribe(data => {
